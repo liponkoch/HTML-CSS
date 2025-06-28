@@ -1,0 +1,322 @@
+<!-- A file with HTML and CSS  -->  
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Elements Reference Guide</title>
+    <style>
+        :root {
+            --primary-color: #2563eb;
+            --secondary-color: #4b5563;
+            --accent-color: #9333ea;
+            --light-bg: #f9fafb;
+            --dark-bg: #1f2937;
+            --success-color: #10b981;
+            --danger-color: #ef4444;
+            
+            --font-sans: 'Segoe UI', Roboto, sans-serif;
+            --font-mono: 'Courier New', monospace;
+            
+            --spacing-xs: 0.5rem;
+            --spacing-sm: 1rem;
+            --spacing-md: 1.5rem;
+            --spacing-lg: 2rem;
+            
+            --border-radius: 0.25rem;
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        
+        body {
+            font-family: var(--font-sans);
+            line-height: 1.6;
+            color: var(--dark-bg);
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: var(--spacing-md);
+        }
+        
+        h1, h2, h3, h4 {
+            color: var(--primary-color);
+            margin-top: var(--spacing-lg);
+            margin-bottom: var(--spacing-sm);
+        }
+        
+        code, pre {
+            font-family: var(--font-mono);
+            background-color: var(--light-bg);
+            padding: 0.2rem 0.4rem;
+            border-radius: var(--border-radius);
+        }
+        
+        pre {
+            padding: var(--spacing-sm);
+            overflow-x: auto;
+            margin: var(--spacing-md) 0;
+        }
+        
+        .example {
+            background-color: var(--light-bg);
+            border-left: 4px solid var(--accent-color);
+            padding: var(--spacing-sm);
+            margin: var(--spacing-md) 0;
+            border-radius: 0 var(--border-radius) var(--border-radius) 0;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: var(--spacing-md) 0;
+        }
+        
+        th, td {
+            padding: var(--spacing-sm);
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        th {
+            background-color: var(--primary-color);
+            color: white;
+        }
+        
+        tr:nth-child(even) {
+            background-color: var(--light-bg);
+        }
+        
+        .element-card {
+            border: 1px solid #ddd;
+            border-radius: var(--border-radius);
+            padding: var(--spacing-md);
+            margin: var(--spacing-md) 0;
+            box-shadow: var(--shadow-sm);
+        }
+        
+        .element-name {
+            font-weight: bold;
+            color: var(--primary-color);
+            font-size: 1.2rem;
+        }
+        
+        .tag {
+            background-color: var(--dark-bg);
+            color: white;
+            padding: 0.2rem 0.4rem;
+            border-radius: var(--border-radius);
+        }
+
+        footer p:last-child {
+            text-align: center;
+            margin-top: var(--spacing-lg);
+            color: var(--accent-color);
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <h1>HTML Elements Reference Guide</h1>
+    <p>A comprehensive guide to HTML elements with examples and best practices.</p>
+    
+    <section>
+        <h2>Document Structure</h2>
+        
+        <div class="element-card">
+            <div class="element-name">&lt;!DOCTYPE html&gt;</div>
+            <p>Defines the document type and HTML version.</p>
+            <div class="example">
+                <pre><code>&lt;!DOCTYPE html&gt;</code></pre>
+            </div>
+        </div>
+        
+        <div class="element-card">
+            <div class="element-name">&lt;html&gt;</div>
+            <p>The root element of an HTML document.</p>
+            <div class="example">
+                <pre><code>&lt;html lang="en"&gt;
+&lt;!-- content goes here --&gt;
+&lt;/html&gt;</code></pre>
+            </div>
+            <p><strong>Best Practice:</strong> Always include the <code>lang</code> attribute.</p>
+        </div>
+        
+        <div class="element-card">
+            <div class="element-name">&lt;head&gt;</div>
+            <p>Contains meta-information about the document.</p>
+            <div class="example">
+                <pre><code>&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;Page Title&lt;/title&gt;
+&lt;/head&gt;</code></pre>
+            </div>
+        </div>
+    </section>
+    
+    <section>
+        <h2>Text Content</h2>
+        
+        <div class="element-card">
+            <div class="element-name">&lt;h1&gt; to &lt;h6&gt;</div>
+            <p>Heading elements from most important (h1) to least important (h6).</p>
+            <div class="example">
+                <pre><code>&lt;h1&gt;Main Heading&lt;/h1&gt;
+&lt;h2&gt;Section Heading&lt;/h2&gt;
+&lt;h3&gt;Subsection Heading&lt;/h3&gt;</code></pre>
+            </div>
+            <p><strong>Best Practice:</strong> Use only one h1 per page.</p>
+        </div>
+        
+        <div class="element-card">
+            <div class="element-name">&lt;p&gt;</div>
+            <p>Paragraph element for blocks of text.</p>
+            <div class="example">
+                <pre><code>&lt;p&gt;This is a paragraph of text.&lt;/p&gt;</code></pre>
+            </div>
+        </div>
+    </section>
+    
+    <section>
+        <h2>Semantic Elements</h2>
+        
+        <div class="element-card">
+            <div class="element-name">&lt;header&gt;</div>
+            <p>Represents introductory content.</p>
+            <div class="example">
+                <pre><code>&lt;header&gt;
+  &lt;h1&gt;Website Title&lt;/h1&gt;
+  &lt;nav&gt;...&lt;/nav&gt;
+&lt;/header&gt;</code></pre>
+            </div>
+        </div>
+        
+        <div class="element-card">
+            <div class="element-name">&lt;main&gt;</div>
+            <p>Contains the main content of the document.</p>
+            <div class="example">
+                <pre><code>&lt;main&gt;
+  &lt;article&gt;...&lt;/article&gt;
+  &lt;aside&gt;...&lt;/aside&gt;
+&lt;/main&gt;</code></pre>
+            </div>
+        </div>
+        
+        <div class="element-card">
+            <div class="element-name">&lt;footer&gt;</div>
+            <p>Contains footer information.</p>
+            <div class="example">
+                <pre><code>&lt;footer&gt;
+  &lt;p&gt;© 2023 Company Name&lt;/p&gt;
+&lt;/footer&gt;</code></pre>
+            </div>
+        </div>
+    </section>
+    
+    <section>
+        <h2>Forms and Input</h2>
+        
+        <div class="element-card">
+            <div class="element-name">&lt;form&gt;</div>
+            <p>Container for form elements.</p>
+            <div class="example">
+                <pre><code>&lt;form action="/submit" method="post"&gt;
+  &lt;label for="name"&gt;Name:&lt;/label&gt;
+  &lt;input type="text" id="name" name="name"&gt;
+  &lt;button type="submit"&gt;Submit&lt;/button&gt;
+&lt;/form&gt;</code></pre>
+            </div>
+        </div>
+        
+        <div class="element-card">
+            <div class="element-name">&lt;input&gt;</div>
+            <p>Various input types for forms.</p>
+            <div class="example">
+                <pre><code>&lt;input type="text" placeholder="Text input"&gt;
+&lt;input type="email" placeholder="Email"&gt;
+&lt;input type="password" placeholder="Password"&gt;
+&lt;input type="number" placeholder="Number"&gt;
+&lt;input type="date"&gt;
+&lt;input type="checkbox" id="agree"&gt;
+&lt;label for="agree"&gt;I agree&lt;/label&gt;</code></pre>
+            </div>
+        </div>
+    </section>
+    
+    <section>
+        <h2>Media Elements</h2>
+        
+        <div class="element-card">
+            <div class="element-name">&lt;img&gt;</div>
+            <p>Embeds an image.</p>
+            <div class="example">
+                <pre><code>&lt;img src="image.jpg" alt="Description of image" width="300" height="200"&gt;</code></pre>
+            </div>
+            <p><strong>Best Practice:</strong> Always include the <code>alt</code> attribute.</p>
+        </div>
+        
+        <div class="element-card">
+            <div class="element-name">&lt;video&gt;</div>
+            <p>Embeds video content.</p>
+            <div class="example">
+                <pre><code>&lt;video width="400" controls&gt;
+  &lt;source src="movie.mp4" type="video/mp4"&gt;
+  Your browser does not support HTML5 video.
+&lt;/video&gt;</code></pre>
+            </div>
+        </div>
+    </section>
+    
+    <section>
+        <h2>HTML Element Reference Table</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Tag</th>
+                    <th>Description</th>
+                    <th>Example</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><span class="tag">&lt;a&gt;</span></td>
+                    <td>Creates hyperlinks</td>
+                    <td><code>&lt;a href="https://example.com"&gt;Link&lt;/a&gt;</code></td>
+                </tr>
+                <tr>
+                    <td><span class="tag">&lt;ul&gt;</span></td>
+                    <td>Unordered list</td>
+                    <td><code>&lt;ul&gt;&lt;li&gt;Item&lt;/li&gt;&lt;/ul&gt;</code></td>
+                </tr>
+                <tr>
+                    <td><span class="tag">&lt;ol&gt;</span></td>
+                    <td>Ordered list</td>
+                    <td><code>&lt;ol&gt;&lt;li&gt;First&lt;/li&gt;&lt;/ol&gt;</code></td>
+                </tr>
+                <tr>
+                    <td><span class="tag">&lt;div&gt;</span></td>
+                    <td>Generic container</td>
+                    <td><code>&lt;div class="container"&gt;...&lt;/div&gt;</code></td>
+                </tr>
+                <tr>
+                    <td><span class="tag">&lt;span&gt;</span></td>
+                    <td>Inline container</td>
+                    <td><code>&lt;span class="highlight"&gt;text&lt;/span&gt;</code></td>
+                </tr>
+                <tr>
+                    <td><span class="tag">&lt;table&gt;</span></td>
+                    <td>Creates a table</td>
+                    <td><code>&lt;table&gt;&lt;tr&gt;&lt;td&gt;Data&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</code></td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+    
+    <footer>
+        <p>This guide covers the most commonly used HTML elements. For a complete reference, visit the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element" target="_blank">MDN HTML Element Reference</a>.</p>
+        <p style="text-align: center; margin-top: 2rem; color: var(--accent-color); font-style: italic;">
+            Made with ❤️ by liponkoch
+        </p>
+    </footer>
+</body>
+</html>
